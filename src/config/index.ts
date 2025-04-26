@@ -1,0 +1,10 @@
+export const GHOST_BASE_URL = 'https://tosu-thien.com';
+export const GHOST_API_KEY = '22f02f889379cdfd103fdd5a29';
+export const CMS_BASE_URL = 'https://bo-api.tosu-thien.com';
+export const GOOGLE_API_KEY = 'AIzaSyDMNUW8bjAOr-deUaN7Ti6ol49XywZEHGg';
+export const API_BASE_URL = "https://cms.tosu-thien.com/api/content/tosuthien"
+export const ASSETS_BASE_URL = "https://cms.tosu-thien.com/api/assets/tosuthien/"
+export const API_AUDIO_URL = 'https://cms.tosu-thien.com/api/content/tosuthien/audio-collections';
+export const API_BOOK_URL='https://cms.tosu-thien.com/api/content/tosuthien/books';
+export const API_CENTER_URL ='https://cms.tosu-thien.com/api/content/tosuthien/places'
+export const API_VIDEO_URL='https://cms.tosu-thien.com/api/content/tosuthien/video-collections'
