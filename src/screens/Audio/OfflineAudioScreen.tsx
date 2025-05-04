@@ -29,7 +29,6 @@ const OfflineAudioScreen = () => {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [isOffline, setIsOffline] = useState(false);
-  const navigation = useNavigation();
   const { playTrack } = usePlayback();
 
   // Kiểm tra trạng thái mạng

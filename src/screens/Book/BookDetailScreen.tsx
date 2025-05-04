@@ -40,7 +40,7 @@ const BookDetailScreen: React.FC<BookDetailScreenProps> = ({ route, navigation }
           return;
         }
 
-        if (!book.isDownload || !book.path) {
+        if (!book.isDownload || !book.path) { 
           setError('Sách chưa được tải xuống');
           setLoading(false);
           return;
@@ -62,7 +62,6 @@ const BookDetailScreen: React.FC<BookDetailScreenProps> = ({ route, navigation }
   }, [bookId]);
 
   const onChangePage = async(page : number) => {
-    console.log(page);
     try {
       await bookServiceProxy.updateBookCurrentPage(bookId, page);
     } catch (error) {
@@ -134,13 +133,6 @@ const BookDetailScreen: React.FC<BookDetailScreenProps> = ({ route, navigation }
       >
         <Icon name="arrow-back" size={24} color="#fff" />
       </TouchableOpacity>
-      
-      {/* Thêm thông tin trang hiện tại */}
-      {pageCount > 0 && (
-        <View style={styles.pageInfo}>
-          <Text style={styles.pageInfoText}>{currentPage}/{pageCount}</Text>
-        </View>
-      )}
     </View>
   );
 };
@@ -205,20 +197,6 @@ const styles = StyleSheet.create({
     top: 10,
     left: 10,
   },
-  pageInfo: {
-    position: 'absolute',
-    bottom: 20,
-    alignSelf: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    paddingHorizontal: 16,
-    paddingVertical: 6,
-    borderRadius: 20,
-  },
-  pageInfoText: {
-    color: '#fff',
-    fontSize: 14,
-    fontWeight: '500',
-  }
 });
 
 export default BookDetailScreen;
